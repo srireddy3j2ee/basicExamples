@@ -3,31 +3,6 @@ package firstProject;
 public class ifElse {
 
 	public static void main(String[] args) {
-		//Simple Data type example
-		dataTypes();
-
-	}
-
-	public static void dataTypes()
-	{
-		int inte = 10;
-		float fl = 1.8f;
-		double db = 2.54454;
-		System.out.println("Simple Integer "+ inte);
-		System.out.println("Max Integer value " + Integer.MAX_VALUE+"\n");
-		System.out.println("Double "+ db);
-		System.out.println("Max Double value " + Double.MAX_VALUE+"\n");
-		System.out.println("Float "+fl);
-		System.out.println("Max Float value " + Float.MAX_VALUE+"\n");
-
-
-	}
-}
-package firstProject;
-
-public class ifElse {
-
-	public static void main(String[] args) {
 		
 		
 		dataTypes();
