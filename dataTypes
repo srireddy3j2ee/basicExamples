@@ -23,3 +23,44 @@ public class ifElse {
 
 	}
 }
+package firstProject;
+
+public class ifElse {
+
+	public static void main(String[] args) {
+		
+		
+		dataTypes();
+		System.out.println("");
+		arrayExample();
+
+	}
+
+	public static void dataTypes()
+	{
+		int inte = 10;
+		float fl = 1.8f;
+		double db = 2.54454;
+		System.out.println("Simple Integer "+ inte);
+		System.out.println("Max Integer value " + Integer.MAX_VALUE+"\n");
+		System.out.println("Double "+ db);
+		System.out.println("Max Double value " + Double.MAX_VALUE+"\n");
+		System.out.println("Float "+fl);
+		System.out.println("Max Float value " + Float.MAX_VALUE+"\n");
+
+
+	}
+	public static void arrayExample()
+	{
+		int a3[][]=new int[2][2];
+		a3[0][0]=1;
+		a3[0][1]=2;
+		a3[1][0]=10;
+		a3[1][1]=12;
+		System.out.println(a3[0][0]);
+		String[][] a4= {{"))","01"},{"03","04"}};
+		System.out.println(a4[1][1]);
+		String a5[][][]= {{{"94"},{"84"},{"ke"}},{{"54"},{"32"}},{{"343"}}};
+		System.out.println(a5[0][1][0]);
+	}
+}
