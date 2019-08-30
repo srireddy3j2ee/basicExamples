@@ -1,0 +1,30 @@
+package firstProject;
+
+public class ForLoopExample {
+
+	public static void main(String[] args) {
+		printD();
+}
+
+	public static void printD()
+	{
+		int max=5;
+		for(int i=0;i<max;i++)
+		{
+			for(int j=0;j<=i;j++)
+			{
+				System.out.print("* ");
+			}
+			System.out.println();
+		}
+		for(int i=max; i>=0;i--)
+		{
+			for(int j=0;j<=i;j++)
+			{
+				System.out.print("* ");
+			}
+			System.out.println();
+		}
+	}
+	
+}
