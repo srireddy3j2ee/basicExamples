@@ -1,0 +1,39 @@
+package firstProject;
+
+import java.util.Stack;
+
+public class StackExample {
+
+	public static void main(String[] args) {
+		Stack<String> StackOfBooks= new Stack<>();
+		StackOfBooks.push("Java");
+		StackOfBooks.push("C");
+		StackOfBooks.push("Python");
+		StackOfBooks.push("C++");
+
+		System.out.println("Actual Stack Of Books"+StackOfBooks);
+
+		String removeTopBook = StackOfBooks.pop(); //Removes the top book from the Stack
+		System.out.println("Top book in the Stack is "+removeTopBook);
+		System.out.println("Current Stack Of Books "+StackOfBooks);
+
+		String topBook=StackOfBooks.peek(); //Will not remove from the Stack
+		System.out.println("Top book in the Stack is "+topBook);
+
+		System.out.println("Current Stack Of Books "+StackOfBooks);
+
+		int bookPosition=StackOfBooks.search("C");
+		if(bookPosition!=-1)
+			System.out.println("Position Of  \"C\" Book in the Stack is "+bookPosition);
+		else
+			System.out.println("\"C\" book is not found in the Stack ");
+		
+		if(!StackOfBooks.empty()) {
+			for(int i=0;i<=StackOfBooks.size()+1;i++) {
+				topBook=StackOfBooks.pop();
+				System.out.print(topBook+"\t");
+			}
+		}
+		System.out.println("\nStack is "+StackOfBooks);
+	}
+}
