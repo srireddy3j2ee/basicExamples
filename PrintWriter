@@ -1,0 +1,36 @@
+package firstProject;
+
+import java.io.PipedWriter;
+import java.io.PrintWriter;
+import java.time.*;
+
+import java.util.ArrayList;
+import java.util.List;
+class Test1 {
+	public static void main (String args[]) {
+		int x=10;
+		try {
+		PrintWriter pw = new PrintWriter("abc.txt") ;
+		pw.println("hello");
+		System.out.println("Print");
+		}catch(Exception e) {
+			System.out.println(e);
+			}
+		try {
+			
+			System.out.println(x/0);
+			System.out.println(x);
+		
+		}catch(NullPointerException ne) {
+			System.out.println(ne);
+		}catch(Exception e){
+			System.out.println(e);
+		}finally		
+				{
+			System.out.println("finally");
+		}
+		try {
+		System.out.println("catch");
+		}catch(Exception e) {} 
+		
+				}
