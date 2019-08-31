@@ -1,0 +1,59 @@
+package firstProject;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class ArrayListExample {
+
+	public static void main(String[] args) {
+		int j=0;
+		ArrayList<String> bikes= new ArrayList<>();
+
+		ArrayList<String> localBikes=new ArrayList<>();
+		localBikes.add("Atlas");
+		localBikes.add("Activa");
+
+		bikes.add("Harley Davidson");
+		bikes.add(null);
+		bikes.add("Yamaha");
+		bikes.add(1, "Honda");	//add an element at particular index location
+		bikes.add("Scooty");
+		bikes.addAll(localBikes);	//add Collection of Objects at the end of list
+		System.out.println(bikes);
+
+		System.out.println("\nBike at 2nd location is "+bikes.get(1));	//returns 2nd element
+		bikes.set(2, "Suzuki");	//replaces the 3rd element
+		bikes.add(null);
+		bikes.add( "TVS");
+		System.out.println(bikes);
+
+		if(bikes.contains("Activa"))
+			System.out.println("Activa is in the list");
+		else
+			System.out.println("Activa is not in the list");
+
+		System.out.println("\nPrinting with the help of for loop");
+		for (int i=0;i<bikes.size();i++)
+		{
+			if(bikes.get(i)==null)
+			{
+				j=i;
+				System.out.println("No Brand at this position");			
+				continue;	//not to print null
+			}
+			System.out.println(bikes.get(i));
+		}
+		bikes.remove(j);
+		//bikes.add(null);	// we will get java.lang.NullPointerException
+		Collections.sort(bikes);
+		System.out.println("\nPrinting with the help of for each loop in sorting orede");
+		for(String k : bikes)
+			System.out.println(k);
+		//System.out.println(bikes);
+
+		bikes.clear();
+		System.out.println("\nAfter clearing the list " + bikes);
+		System.out.println("Size is "+bikes.size());
+	}
+
+}
