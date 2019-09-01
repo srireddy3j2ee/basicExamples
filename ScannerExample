@@ -1,0 +1,30 @@
+package firstProject;
+
+import java.text.NumberFormat;
+import java.util.Scanner;
+
+public class ScannerExample {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+
+		System.out.print("Enter Name ");
+		String nameInput=sc.nextLine();	//String input
+
+		System.out.println("Age ");
+		int ageInput=sc.nextInt();		//Integer input
+
+		System.out.println("Salary ");
+		double salInput=sc.nextDouble();//Double input
+
+		System.out.print("Welcome to " + nameInput+"\n");
+		System.out.println(nameInput+" Age is "+ageInput);
+
+		//System.out.println(nameInput+" Salary is "+salInput);
+		//converting salary into currency format $ 00.00
+		String salaryString=NumberFormat.getCurrencyInstance().format(salInput);
+		System.out.println(nameInput+" Salary Amount is "+salaryString);	
+		
+		sc.close();	//closing the Scanner object prevents the memory leak
+	}
+}
