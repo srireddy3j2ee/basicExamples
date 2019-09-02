@@ -1,0 +1,49 @@
+package firstProject;
+
+import java.util.Scanner;
+
+public class FibonacciExample
+{
+	public static void main(String[] args)
+	{
+		System.out.println("Enter number for Fibonacci series ");
+		int number = new Scanner(System.in).nextInt();
+
+		System.out.println("Fibonacci series upto " + number +" numbers : ");
+
+		for(int i=1; i<=number; i++)
+		{
+			System.out.print(fibonacci(i) + " ");
+		}
+
+		//Calculates the febonacci number in recursion
+		System.out.println("\n"+number +" th Fibonacci no is "+fibonacciRec(number));
+	}
+
+	public static int fibonacciRec(int number)
+	{
+		if(number == 1 || number == 2){
+			return 1;
+		}
+
+		return fibonacci(number-1) + fibonacci(number -2); // recursion
+	}
+
+
+	public static int fibonacci(int number)
+	{
+		if(number == 1 || number == 2){
+			return 1;
+		}
+		int fiboTemp1=1, fiboTemp2=1, fibonacci=1;
+		for(int i= 3; i<= number; i++)
+		{
+
+			fibonacci = fiboTemp1 + fiboTemp2;             
+			fiboTemp1 = fiboTemp2;
+			fiboTemp2 = fibonacci;
+		}
+		return fibonacci;
+
+	}   
+}
